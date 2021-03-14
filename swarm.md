@@ -25,12 +25,25 @@ curl localhost -I
 ```
 ```
 sudo docker container --help
+  sudo docker container ls
+  sudo docker container run
 sudo docker image --help
+  sudo docker image build
+  sudo docker image pull
+  sudo docker image push
 sudo docker volume --help
 sudo docker network --help
 ```
 ```
 sudo docker service --help
+  sudo docker service ls
+  sudo docker service logs
 sudo docker stack --help
+  sudo docker stack deploy
+  sudo docker stack ls
+  sudo docker stack rm
 sudo docker swarm --help
+  sudo docker swarm init
+  sudo docker swarm join
+  sudo docker swarm leave
 ```
