@@ -58,3 +58,11 @@ sudo docker swarm --help
   sudo docker swarm join
   sudo docker swarm leave
 ```
+```
+sudo docker service create --name dca-phpinfo -p 8000:8080 academiaonline/dca-phpinfo:latest
+sudo docker service ls
+sudo docker service ps dca-phpinfo
+sudo docker service scale dca-phpinfo=3
+sudo docker service ps dca-phpinfo
+sudo docker service rm dca-phpinfo
+```
