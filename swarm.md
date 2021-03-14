@@ -23,3 +23,9 @@ sudo docker service ls
 sudo docker service logs dca-phpinfo_dca-phpinfo
 curl localhost -I
 ```
+```
+sudo docker container ls
+sudo docker image ls
+sudo docker volume ls
+sudo docker network ls
+```
