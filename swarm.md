@@ -26,7 +26,9 @@ curl localhost -I
 ```
 sudo docker container --help
   sudo docker container exec
+  sudo docker container kill
   sudo docker container ls
+  sudo docker container rm
   sudo docker container run
 sudo docker image --help
   sudo docker image build
