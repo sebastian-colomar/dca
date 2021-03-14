@@ -29,3 +29,8 @@ sudo docker image --help
 sudo docker volume --help
 sudo docker network --help
 ```
+```
+sudo docker service --help
+sudo docker stack --help
+sudo docker swarm --help
+```
