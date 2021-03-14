@@ -47,6 +47,7 @@ sudo docker service --help
   sudo docker service create
   sudo docker service ls
   sudo docker service logs
+  sudo docker service ps
 sudo docker stack --help
   sudo docker stack deploy
   sudo docker stack ls
