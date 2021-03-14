@@ -28,6 +28,7 @@ sudo docker container --help
   sudo docker container exec
   sudo docker container kill
   sudo docker container ls
+  sudo docker container port
   sudo docker container prune
   sudo docker container rm
   sudo docker container run
