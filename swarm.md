@@ -44,6 +44,7 @@ sudo docker network --help
 sudo docker node --help
   sudo docker node ls
 sudo docker service --help
+  sudo docker service create
   sudo docker service ls
   sudo docker service logs
 sudo docker stack --help
