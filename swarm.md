@@ -28,10 +28,12 @@ sudo docker container --help
   sudo docker container exec
   sudo docker container kill
   sudo docker container ls
+  sudo docker container prune
   sudo docker container rm
   sudo docker container run
 sudo docker image --help
   sudo docker image build
+  sudo docker image prune
   sudo docker image pull
   sudo docker image push
 sudo docker volume --help
