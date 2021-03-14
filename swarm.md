@@ -35,6 +35,8 @@ sudo docker volume --help
 sudo docker network --help
 ```
 ```
+sudo docker node --help
+  sudo docker node ls
 sudo docker service --help
   sudo docker service ls
   sudo docker service logs
