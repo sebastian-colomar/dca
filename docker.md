@@ -1,4 +1,5 @@
-1998  sudo docker run --name test -d alpine
+ ```bash
+ 1998  sudo docker run --name test -d alpine
  1999  sudo docker ps 
  2000  sudo docker ps -a
  2001  sudo ls /var/lib/docker/container
@@ -40,3 +41,4 @@
  2038  sudo docker exec test which tcpdump
  2039  sudo docker exec test apk add tcpdump
  2040  sudo docker exec test which tcpdump
+```
