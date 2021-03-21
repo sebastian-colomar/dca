@@ -66,3 +66,6 @@ sudo docker service scale dca-phpinfo=3
 sudo docker service ps dca-phpinfo
 sudo docker service rm dca-phpinfo
 ```
+```bash
+sudo iptables -S -t nat
+```
