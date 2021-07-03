@@ -1,2 +1,3 @@
 ```
-ss --listening --numeric --tcp --processes
+ss --listening --numeric --tcp
+sudo ss --listening --numeric --tcp --processes
