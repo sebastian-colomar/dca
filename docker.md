@@ -44,3 +44,4 @@
 ```
 ```
 docker run --detach --name NAME_OF_CONTAINER --rm NAME_OF_IMAGE:RELEASE_NAME
+docker exec NAME_OF_CONTAINER COMMAND ARGUMENT_OF_COMMAND
