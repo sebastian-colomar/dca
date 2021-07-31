@@ -16,4 +16,5 @@ docker container logs pinger
 docker container ls
 docker container top pinger
 cat /proc/27226/cgroup
+docker container stats pinger --no-stream
 ```
