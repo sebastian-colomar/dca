@@ -17,4 +17,8 @@ docker container ls
 docker container top pinger
 cat /proc/27226/cgroup
 docker container stats pinger --no-stream
+docker container kill pinger
+docker container run --cpus 0.1 --detach --entrypoint /bin/ping --name pinger --rm alpine:latest localhost
+docker container kill pinger 
+docker container run --cpus 0.1 --detach --entrypoint /bin/ping --memory 10M --name pinger --rm alpine:latest localhost
 ```
