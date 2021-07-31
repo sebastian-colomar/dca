@@ -23,3 +23,7 @@ docker container kill pinger
 docker container run --cpus 0.05 --detach --entrypoint /bin/ping --memory 10M --name pinger --rm alpine:latest localhost
 docker container stats pinger --no-stream
 ```
+```
+docker container ls
+docker ps
+```
