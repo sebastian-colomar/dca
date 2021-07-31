@@ -9,3 +9,11 @@ docker container run --entrypoint /bin/ls --rm alpine:latest /bin
 docker container run --entrypoint /usr/bin/which --rm alpine:latest netstat
 docker container run --entrypoint /bin/netstat --rm alpine:latest --help
 ```
+```
+cat /proc/1/cgroups
+docker container run --detach --entrypoint /bin/ping --name pinger --rm alpine:latest localhost
+docker container logs pinger
+docker container ls
+docker container top pinger
+cat /proc/27226/cgroup
+```
