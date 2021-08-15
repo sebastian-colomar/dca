@@ -10,3 +10,9 @@ sudo add-apt-repository "deb [arch=$(dpkg --print-architecture)] $DOCKER_EE_URL/
 sudo apt-get --yes update
 sudo apt-get --yes install docker-ee docker-ee-cli containerd.io
 ```
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+docker run hello-world
+```
