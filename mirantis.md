@@ -1,3 +1,4 @@
+## INSTALL MIRANTIS CONTAINER RUNTIME
 ```
 sudo apt-get --yes remove docker docker-engine docker-ce docker-ce-cli docker.io
 sudo apt-get --yes update
@@ -10,9 +11,14 @@ sudo add-apt-repository "deb [arch=$(dpkg --print-architecture)] $DOCKER_EE_URL/
 sudo apt-get --yes update
 sudo apt-get --yes install docker-ee docker-ee-cli containerd.io
 ```
+## ADD DOCKER GROUP
 ```
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 docker run hello-world
+```
+## INSTALL MIRANTIS KUBERNETES ENGINE
+```
+docker container run --rm --interactive --tty --name ucp --volume /var/run/docker.sock:/var/run/docker.sock mirantis/ucp:3.4.4 install --host-address $( ip route | grep dev.eth0.proto.kernel | awk '{ print $9 }' ) --interactive --force-minimums
 ```
