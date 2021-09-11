@@ -13,10 +13,11 @@ docker container exec c1 ifconfig
 docker container exec c2 ifconfig
 ```
 ```
+ip route
+
 docker container exec c0 ip route
 docker container exec c1 ip route
 docker container exec c2 ip route
-ip route
 ```
 ```
 docker container exec c0 ping -c1 localhost
