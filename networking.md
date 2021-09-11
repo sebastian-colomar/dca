@@ -40,6 +40,8 @@ docker container exec c2 ping c1
 ```
 ```
 docker network connect net1 c2
+docker container inspect c2 | grep IPAddress
+
 docker container exec c1 ping -c1 c2
 docker container exec c2 ping -c1 c1
 ```
