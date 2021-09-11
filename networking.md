@@ -7,3 +7,38 @@ docker container run --detach --name c2 --network net2 --tty library/alpine:late
 
 docker container run --detach --name c0 --network none --tty library/alpine:latest
 ```
+```
+docker container exec c0 ifconfig
+docker container exec c1 ifconfig
+docker container exec c2 ifconfig
+```
+```
+docker container exec c0 ip route
+docker container exec c1 ip route
+docker container exec c2 ip route
+ip route
+```
+```
+docker container exec c0 ping -c1 localhost
+docker container exec c1 ping -c1 localhost
+docker container exec c2 ping -c1 localhost
+```
+```
+docker container exec c0 ping -c1 8.8.8.8
+docker container exec c1 ping -c1 8.8.8.8
+docker container exec c2 ping -c1 8.8.8.8
+```
+```
+docker container inspect c0 | grep IPAddress
+docker container inspect c1 | grep IPAddress
+docker container inspect c2 | grep IPAddress
+```
+```
+docker container exec c1 ping c2
+docker container exec c2 ping c1
+```
+```
+docker network connect net1 c2
+docker container exec c1 ping -c1 c2
+docker container exec c2 ping -c1 c1
+```
