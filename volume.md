@@ -5,6 +5,7 @@ sudo docker container run --rm --name test -d -v sebastian:/opt alpine ping loca
 sudo docker container exec test ls /opt -l
 sudo docker container exec test touch /opt/sebastian
 sudo docker container exec test ls /opt -l
+sudo docker volume inspect test
 sudo ls /var/lib/docker/volumes/sebastian/_data -l
 ```
 ```
