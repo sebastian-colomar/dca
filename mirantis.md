@@ -23,9 +23,9 @@ docker run hello-world
 ## INSTALL MIRANTIS KUBERNETES ENGINE
 https://docs.mirantis.com/mke/3.4/install/install-mke-image.html
 ```
-docker container run --rm --interactive --tty --name ucp --volume /var/run/docker.sock:/var/run/docker.sock mirantis/ucp:3.4.4 install --host-address $( ip route | grep dev.eth0.proto.kernel | awk '{ print $9 }' ) --interactive --force-minimums
+docker container run --rm --interactive --tty --name ucp --volume /var/run/docker.sock:/var/run/docker.sock mirantis/ucp:3.4.9 install --host-address $( ip route | grep dev.eth0.proto.kernel | awk '{ print $9 }' ) --interactive --force-minimums
 ```
 ## UNINSTALL MIRANTIS KUBERNETES ENGINE
 ```
-docker container run --rm -it -v /var/run/docker.sock:/var/run/docker.sock --name ucp mirantis/ucp:3.4.4 uninstall-ucp --interactive
+docker container run --rm -it -v /var/run/docker.sock:/var/run/docker.sock --name ucp mirantis/ucp:3.4.9 uninstall-ucp --interactive
 ```
