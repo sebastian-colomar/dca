@@ -1,0 +1,45 @@
+# docker-compose.yaml
+# THIS IS THE LIST OF DOCKER CONFIGS WE WANT TO APPLY
+configs:
+  # THIS IS THE DOCKER CONFIG WE CREATED IN A PREVIOUS STEP
+  index.php:
+    # THIS WILL INVOKE THE PREVIOUSLY CREATED DOCKER CONFIG
+    external: true
+# THIS IS THE LIST OF SERVICES WE WANT TO CREATE
+services:
+  # THIS IS THE NAME OF THE SERVICE
+  phpinfo:
+    # THESE ARE THE ARGUMENTS OF THE ENTRYPOINT
+    command:
+      - -f
+      - index.php
+      - -S
+      - 0.0.0.0:8080
+    # EQUIVALENT TO: --config source=index.php,target=/app/index.php,mode=0400,uid=65534
+    configs:
+      - 
+        mode: 0400
+        source: index.php
+        target: /app/index.php
+        uid: '65534'
+    # EQUIVALENT TO: --mode replicated --replicas 2 --restart-condition any
+    deploy:
+      mode: replicated
+      replicas: 2
+      restart_policy:
+        condition: any
+    # EQUIVALENT TO: --entrypoint php
+    entrypoint: php
+    # THIS IS THE NAME OF THE DOCKER IMAGE
+    image: php
+    # EQUIVALENT TO: --publish 8080
+    ports:
+      - 8080
+    # EQUIVALENT TO: --read-only
+    read_only: true
+    # EQUIVALENT TO: --user nobody
+    user: nobody
+    # EQUIVALENT TO: --workdir /app/
+    working_dir: /app/
+# THIS IS THE DOCKER API VERSION THAT WE WANT TO USE FOR THIS DEPLOYMENT
+version: "3.8"
