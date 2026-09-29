@@ -34,7 +34,7 @@ In order to connect from outside I need to publish a Node Port from the host mac
 ```
 docker rm phpinfo-container --force
 
-docker run --cpus 0.100 --detach --env AUTHOR=Sebastian --memory 100M --memory-reservation 100M --name phpinfo-container --network phpinfo-network --publish 8080 --read-only --restart always --user nobody:nogroup --volume ${HOME}/phpinfo/index.php:/data/index.php:ro --workdir /data/ 172.31.10.220/library/php:alpine php -f index.php -S 0.0.0.0:8080
+docker run --cpus 0.100 --detach --env AUTHOR=Sebastian --memory 100M --memory-reservation 100M --name phpinfo-container --network phpinfo-network --publish 8080 --read-only --restart always --user nobody:nogroup --volume ${HOME}/phpinfo/index.php:/data/index.php:ro --workdir /data/ docker.io/library/php:alpine php -f index.php -S 0.0.0.0:8080
 
 docker exec phpinfo-container wget localhost:8080 -O - -q --spider -S
 
