@@ -60,8 +60,10 @@ docker run hello-world
 ## INSTALL MIRANTIS KUBERNETES ENGINE
 - https://docs.mirantis.com/mke/3.9/install/install-mke-image.html
 ```
-UCP_VERSION=3.9.7
 POD_CIDR=10.244.0.0/16
+```
+```
+UCP_VERSION=3.9.7
 docker container run --interactive --name ucp --rm --tty --volume /var/run/docker.sock:/var/run/docker.sock mirantis/ucp:$UCP_VERSION install --force-minimums --host-address $( ip route | grep dev.eth0.proto.kernel | awk '{ print $9 }' ) --interactive --pod-cidr $POD_CIDR 
 ```
 ## UNINSTALL MIRANTIS KUBERNETES ENGINE
