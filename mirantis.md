@@ -3,12 +3,18 @@
 ```
 #sudo apt-get --yes remove docker docker-engine docker-ce docker-ce-cli docker.io
 sudo apt-get --yes update
+```
+```
 #sudo apt-get --yes install apt-transport-https ca-certificates curl software-properties-common
 sudo apt-get --yes install curl gnupg
+```
+```
 DOCKER_EE_URL="http://repos.mirantis.com"
 DOCKER_EE_VERSION=29.2.1
 #curl -fsSL "${DOCKER_EE_URL}/ubuntu/gpg" | sudo apt-key add -
 sudo gpg --batch --yes --output /usr/share/keyrings/mirantis-archive-keyring.gpg --dearmor <<< $(curl -fsSL "${DOCKER_EE_URL}/ubuntu/gpg")
+```
+```
 gpg --show-keys --with-fingerprint --keyid-format=short /usr/share/keyrings/mirantis-archive-keyring.gpg
 echo 'Expected value = DD91 1E99 5A64 A202 E859  07D6 BC14 F10B 6D08 5F96'
 #sudo apt-key fingerprint 6D085F96
@@ -23,18 +29,29 @@ Architectures: amd64
 Components: $COMPONENT
 Signed-by: /usr/share/keyrings/mirantis-archive-keyring.gpg
 EOF
+```
+```
 sudo apt-get --yes update
+```
+```
 #sudo apt-get --yes install docker-ee docker-ee-cli containerd.io
 sudo apt-get --yes install docker-ee
-sudo apt-get --yes update
-sudo apt-get --yes upgrade
+```
+```
+sudo apt-get --yes update && sudo apt-get --yes upgrade
+```
+```
 sudo docker run hello-world
 ```
 ## ADD DOCKER GROUP
 https://docs.docker.com/engine/install/linux-postinstall/
 ```
 sudo groupadd docker
+```
+```
 sudo usermod -aG docker $USER
+```
+```
 newgrp docker
 docker run hello-world
 ```
