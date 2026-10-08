@@ -60,7 +60,7 @@ docker run hello-world
 ```
 UCP_VERSION=3.9.7
 POD_CIDR=10.244.0.0/16
-docker container run --interactive --name ucp --pod-cidr $POD_CIDR --rm --tty --volume /var/run/docker.sock:/var/run/docker.sock mirantis/ucp:$UCP_VERSION install --host-address $( ip route | grep dev.eth0.proto.kernel | awk '{ print $9 }' ) --interactive --force-minimums
+docker container run --interactive --name ucp --rm --tty --volume /var/run/docker.sock:/var/run/docker.sock mirantis/ucp:$UCP_VERSION install --force-minimums --host-address $( ip route | grep dev.eth0.proto.kernel | awk '{ print $9 }' ) --interactive --pod-cidr $POD_CIDR 
 ```
 ## UNINSTALL MIRANTIS KUBERNETES ENGINE
 ```
