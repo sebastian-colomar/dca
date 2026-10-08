@@ -1,7 +1,7 @@
 ## INSTALL MIRANTIS CONTAINER RUNTIME
 - https://docs.mirantis.com/mcr/29/install/mcr-linux/ubuntu.html
 ```
-sudo apt-get --yes remove docker docker-engine docker-ce docker-ce-cli docker.io
+#sudo apt-get --yes remove docker docker-engine docker-ce docker-ce-cli docker.io
 sudo apt-get --yes update
 #sudo apt-get --yes install apt-transport-https ca-certificates curl software-properties-common
 sudo apt-get --yes install curl gnupg
