@@ -10,9 +10,11 @@ sudo apt-get --yes install curl gnupg
 ```
 ```
 DOCKER_EE_URL="http://repos.mirantis.com"
-DOCKER_EE_VERSION=29.8.0
 #curl -fsSL "${DOCKER_EE_URL}/ubuntu/gpg" | sudo apt-key add -
 sudo gpg --batch --yes --output /usr/share/keyrings/mirantis-archive-keyring.gpg --dearmor <<< $(curl -fsSL "${DOCKER_EE_URL}/ubuntu/gpg")
+```
+```
+DOCKER_EE_VERSION=29.2.1
 ```
 ```
 gpg --show-keys --with-fingerprint --keyid-format=short /usr/share/keyrings/mirantis-archive-keyring.gpg
